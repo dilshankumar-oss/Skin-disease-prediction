@@ -1,13 +1,13 @@
-# Eclipse files
-.classpath
-.project
-.settings/
-.metadata/
+# Temporary build directories
 bin/
 build/
+target/
+.metadata/
 
-# Compiled class files
-*.class
+# Database temporary files
+*.db
+*.lock.db
+*.trace.db
 
 # Tomcat files
 apache-tomcat-10.1.36/
@@ -15,10 +15,8 @@ apache-tomcat-10.1.36/
 # Log files
 *.log
 
-# OS files
+# OS & IDE temporary files
 .DS_Store
 Thumbs.db
-
-# IDE
 *.swp
 *.swo
