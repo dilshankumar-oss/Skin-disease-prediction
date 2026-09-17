@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Skin Disease Analysis</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body style="display: flex; align-items: center; justify-content: center; min-height: 100vh; padding-bottom: 0;">
+
+    <div class="container" style="max-width: 450px; width: 100%;">
+        <div class="text-center mb-20">
+            <h1 class="glow-text" style="font-size: 2.2rem;">Derm<span>Analysis</span></h1>
+            <p class="subtitle">Skin Disease Analysis System</p>
+        </div>
+
+        <!-- Alert placeholder for errors -->
+        <div id="error-container"></div>
+
+        <div class="card glass-card hover-glow">
+            <h2 class="text-center" style="margin-bottom: 25px;">User Authentication</h2>
+            
+            <form action="LoginServlet" method="POST">
+                <div class="form-group">
+                    <label for="userId">User ID / Username</label>
+                    <input type="text" id="userId" name="userId" placeholder="Enter your username" required autocomplete="username">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required autocomplete="current-password">
+                </div>
+                
+                <p class="subtitle" style="font-size: 0.82rem; margin-bottom: 20px;">
+                    * Note: If your credentials do not exist in the database, a new account will be created automatically.
+                </p>
+
+                <button type="submit" class="btn btn-primary btn-block">Authenticate & Login</button>
+            </form>
+        </div>
+
+        <div class="text-center mt-20">
+            <a href="index.jsp" style="font-size: 0.9rem; color: var(--text-secondary);">← Back to System Dashboard</a>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        // Check for error parameters in the URL and display them
+        const urlParams = new URLSearchParams(window.location.search);
+        const errorMsg = urlParams.get('error');
+        if (errorMsg) {
+            const errorContainer = document.getElementById('error-container');
+            const alertDiv = document.createElement('div');
+            alertDiv.className = 'alert alert-error';
+            alertDiv.innerHTML = `
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>${decodeURIComponent(errorMsg)}</span>
+            `;
+            errorContainer.appendChild(alertDiv);
+        }
+    </script>
+</body>
+</html>

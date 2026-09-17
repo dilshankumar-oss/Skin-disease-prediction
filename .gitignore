@@ -1,0 +1,24 @@
+# Eclipse files
+.classpath
+.project
+.settings/
+.metadata/
+bin/
+build/
+
+# Compiled class files
+*.class
+
+# Tomcat files
+apache-tomcat-10.1.36/
+
+# Log files
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+*.swp
+*.swo
