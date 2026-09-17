@@ -61,6 +61,15 @@
         <url-pattern>/AnalysisServlet</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>TodoServlet</servlet-name>
+        <servlet-class>com.skindisease.servlet.TodoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TodoServlet</servlet-name>
+        <url-pattern>/TodoServlet</url-pattern>
+    </servlet-mapping>
+    
     <!-- Session timeout in minutes -->
     <session-config>
         <session-timeout>30</session-timeout>
