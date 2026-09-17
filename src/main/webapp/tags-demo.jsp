@@ -100,11 +100,11 @@
             </p>
             <div style="background: rgba(0, 0, 0, 0.3); padding: 15px; border-radius: 8px; font-family: monospace; font-size: 0.8rem; margin-top: 15px; color: #a5d6ff; border: 1px solid rgba(255, 255, 255, 0.05); overflow-x: auto; display: grid; gap: 8px;">
                 <div>
-                    <span style="color: #ff7b72;"><%@ taglib</span> <span style="color: #79c0ff;">uri</span>=<span style="color: #a5d6ff;">"http://skindisease.com/tags"</span> <span style="color: #79c0ff;">prefix</span>=<span style="color: #a5d6ff;">"custom"</span> <span style="color: #ff7b72;">%></span>
+                    <span style="color: #ff7b72;">&lt;&#37;@ taglib</span> <span style="color: #79c0ff;">uri</span>=<span style="color: #a5d6ff;">"http://skindisease.com/tags"</span> <span style="color: #79c0ff;">prefix</span>=<span style="color: #a5d6ff;">"custom"</span> <span style="color: #ff7b72;">&#37;&gt;</span>
                     <span style="color: #8b949e; margin-left: 15px;">&lt;!-- Loads custom.tld mapping --&gt;</span>
                 </div>
                 <div>
-                    <span style="color: #ff7b72;"><%@ taglib</span> <span style="color: #79c0ff;">tagdir</span>=<span style="color: #a5d6ff;">"/WEB-INF/tags"</span> <span style="color: #79c0ff;">prefix</span>=<span style="color: #a5d6ff;">"mytags"</span> <span style="color: #ff7b72;">%></span>
+                    <span style="color: #ff7b72;">&lt;&#37;@ taglib</span> <span style="color: #79c0ff;">tagdir</span>=<span style="color: #a5d6ff;">"/WEB-INF/tags"</span> <span style="color: #79c0ff;">prefix</span>=<span style="color: #a5d6ff;">"mytags"</span> <span style="color: #ff7b72;">&#37;&gt;</span>
                     <span style="color: #8b949e; margin-left: 15px;">&lt;!-- Loads .tag files in tags/ --&gt;</span>
                 </div>
             </div>
